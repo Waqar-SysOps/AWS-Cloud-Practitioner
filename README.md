@@ -35,5 +35,5 @@ This process ensures your application is not only functional but also adheres to
 There aren't many requirements when you look into the implementation of this projection. You just need to make sure of the following:
 
 1) Must have an AWS account with a valid payment method.
-2) Have basic knowledge of networking, Linux system administration, and a domain (could be from google/cloudflare/namecheap etc).
-3) Laptop and an internet connection.
+2) Have basic knowledge of networking, Linux system administration, basic knowledge of AWS architecture/flow and a domain (could be from google/cloudflare/namecheap etc).
+3) PC/Laptop and an internet connection.
