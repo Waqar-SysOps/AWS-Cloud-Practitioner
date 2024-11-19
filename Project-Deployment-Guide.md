@@ -87,7 +87,7 @@ You now have a VPC with public subnets, an internet gateway, a route table for i
 
 ### 2. Configure Route 53  
 1. Go to the **Route 53 Console** and create a new hosted zone:  
-   - **Domain Name:** `testdomain.com`.  
+   - **Domain Name:** `testdomain.com`. **NOTE: THIS IS DUMMY DOMAIN, YOU CAN YOU WHATEVER YOU WANT.**
 2. Copy the **name servers (NS)** provided by AWS and add them to **Cloudflare** or your domain registrar.  
 3. In **Route 53**, create a record:  
    - **Routing Policy:** Simple routing.  
@@ -127,7 +127,6 @@ You now have a VPC with public subnets, an internet gateway, a route table for i
    - Open `https://testdomain.com`.  
    - At this point, the URL will be accessible over both HTTP and HTTPS.
 
-
 ### 5. Redirect HTTP to HTTPS  
 1. Go to the **Load Balancer** in the **EC2 Console**.  
 2. Select `test-lb` and edit the **HTTP:80** listener rule:  
@@ -139,7 +138,6 @@ You now have a VPC with public subnets, an internet gateway, a route table for i
    - Save the changes.  
 3. Test the URL again:  
    - Both `http://testdomain.com` and `https://testdomain.com` will redirect to HTTPS.
-
 
 You have successfully secured your application using AWS services and redirected all traffic to HTTPS!
 
