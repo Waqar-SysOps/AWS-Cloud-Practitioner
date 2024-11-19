@@ -45,7 +45,7 @@
 ### 5. Launch an EC2 Instance  
 1. Navigate to the **EC2 Console** and click **Launch Instance**.  
 2. Provide the following details:  
-   - **Name:** `test-ec2`  
+   - **Name:** `test-ec2` (or create multiple instances as per requirement)
    - **VPC:** `test-vpc`  
    - **Subnet:** Choose `test-public-subnet-1-1a` or `test-public-subnet-1-1b`.  
    - **Auto-assign Public IP:** Enabled.  
