@@ -87,7 +87,7 @@ You now have a VPC with public subnets, an internet gateway, a route table for i
 
 ### 2. Configure Route 53  
 1. Go to the **Route 53 Console** and create a new hosted zone:  
-   - **Domain Name:** `testnoc.ismart.link`.  
+   - **Domain Name:** `testdomain.com`.  
 2. Copy the **name servers (NS)** provided by AWS and add them to **Cloudflare** or your domain registrar.  
 3. In **Route 53**, create a record:  
    - **Routing Policy:** Simple routing.  
@@ -95,14 +95,14 @@ You now have a VPC with public subnets, an internet gateway, a route table for i
    - **Alias Target:** Select the load balancer (`test-lb`).  
    - Save and create the record.  
 4. Test the URL in your browser:  
-   - Open `http://testnoc.ismart.link`.  
+   - Open `http://testdomain.com`.  
    - **Note:** It won't run over HTTPS yet.
 
 
 ### 3. Request an SSL Certificate via ACM  
 1. Navigate to **Certificate Manager** and request a new certificate:  
    - Select **Request a Public Certificate**.  
-   - Add the FQDN: `testnoc.ismart.link`.  
+   - Add the FQDN: `testdomain.com`.  
    - Select **DNS Validation** (since the domain is already pointed to AWS nameservers).  
    - Click **Request**.  
 2. Once the certificate is created, it will be in **Pending Validation** status.  
@@ -121,10 +121,10 @@ You now have a VPC with public subnets, an internet gateway, a route table for i
    - **Forward To:** `test-tg` (your target group).  
    - **Secure Listener Settings:**  
      - **Certificate Source:** Select ACM.  
-     - **Certificate Name:** `testnoc.ismart.link`.  
+     - **Certificate Name:** `testdomain.com`.  
 3. Click **Add** to apply the listener.  
 4. Test the URL in your browser:  
-   - Open `https://testnoc.ismart.link`.  
+   - Open `https://testdomain.com`.  
    - At this point, the URL will be accessible over both HTTP and HTTPS.
 
 
@@ -138,7 +138,7 @@ You now have a VPC with public subnets, an internet gateway, a route table for i
      - **Port:** 443.  
    - Save the changes.  
 3. Test the URL again:  
-   - Both `http://testnoc.ismart.link` and `https://testnoc.ismart.link` will redirect to HTTPS.
+   - Both `http://testdomain.com` and `https://testdomain.com` will redirect to HTTPS.
 
 
 You have successfully secured your application using AWS services and redirected all traffic to HTTPS!
