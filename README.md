@@ -42,6 +42,6 @@ There aren't many requirements when you look into the implementation of this pro
 
 This diagram represents a secure AWS architecture where an end user accesses the application via Route 53 (DNS). Traffic is routed to an Application Load Balancer, which distributes it across EC2 instances hosted in a public subnet within a VPC. An Internet Gateway and Route Table facilitate internet connectivity for the application.
 
-![AWS-ACM Architecture](https://github.com/user-attachments/assets/06fb083d-206c-4787-a4e0-e0d42389160a)
+![AWS-ACM Architecture](https://github.com/user-attachments/assets/9ee1d0a6-5edc-4a13-abb2-e883f248060c)
 
 
